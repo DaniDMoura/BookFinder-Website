@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block 'content_main' %}
+<div class="container-fluid mt-0">
+  <h2 class="fw-bold">Resultados da Busca</h2>
+</div>
+<hr>
+{% for item in data %}
+<div class="container-fluid mt-0">
+  <h5 class="fw-bold"><a href="#" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">{{item.title}}</a></h5>
+  <span>{{item.authors}}</span>
+  <br>
+  <span>{{item.publisher}} | {{item.published_date}}</span>
+</div>
+<hr>
+{% empty %}
+<h3>Nada encontrado</h3>
+{% endfor %}
+{% endblock %}
