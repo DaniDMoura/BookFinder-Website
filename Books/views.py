@@ -56,7 +56,7 @@ class Search(View):
                             'id': book_id,
                         }
                     )
-                return render(request, 'search.html', {'data': books_detailed})
+                return render(request, 'search.html', {'data': books_detailed,'query': query})
         return render(request, 'home.html')
 
 

@@ -2,14 +2,20 @@
 
 BookFinder is a professional-grade web application built with Django, designed to help users search for books, view detailed information, and manage their personal collections.
 
+<p align="center">
+  <img src="Assets/homepage.png" width="100%" />
+</p>
+<br>
+<p align="center">
+  <img src="Assets/searches.png" width="100%" />
+</p>
+
 ## Features
 
 - Search for books by title, author, or genre
 - View comprehensive book details
 - Add books to a personal collection
 - User authentication and account management
-- Responsive and modern UI with Bootstrap
-- Deployed on Railway for scalability
 
 ## Technologies Used
 
@@ -19,13 +25,16 @@ BookFinder is a professional-grade web application built with Django, designed t
 
 ## Installation
 
-### Prerequisites
+#### Prerequisites
 
 - Python (managed with Pyenv)
 - Poetry (for dependency management)
 - PostgreSQL (for production, optional for local development)
+- Redis (Comming Soon)
+- Docker (Comming Soon)
 
-### Setup
+
+#### Setup
 
 1. Clone the repository:
 

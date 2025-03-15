@@ -3,7 +3,7 @@
 {% block 'content_main' %}
 <div class="container mt-2">
   <form class="d-flex mx-auto" method="GET" action="{% url 'search' %}" role="search" style="max-width: 500px;">
-    <input class="form-control me-2" type="search" name="q" value="{{ query }}" placeholder="Buscar um livro..." aria-label="Search">
+    <input class="form-control me-2" type="search" name="q" value="{{ query }}" placeholder={{query}} aria-label="Search">
     <button class="btn btn-dark" type="submit">Buscar</button>
   </form>
 </div>
