@@ -6,15 +6,16 @@
 
 Your personal library companion - Search, discover, and manage your book collection with ease.
 
----
 <br>
 
 ![BookFinder Homepage](Assets/homepage.png)
+<p><p>
+
 ![BookFinder Search](Assets/searches.png)
 
 </div>
 
----
+
 
 ## Tech Stack
 
@@ -27,8 +28,6 @@ Your personal library companion - Search, discover, and manage your book collect
 - **Version Control:** Git
 
 ## Installation
-
----
 
 ### Prerequisites
 
@@ -74,7 +73,7 @@ Before you begin, ensure you have the following installed:
    - Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser
    - Admin panel: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
----
+#
 
 ##  Contributing
 
@@ -88,13 +87,13 @@ We welcome contributions from the community! Here's how you can help:
 
 Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
----
+
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+
 
 ## Support
 
@@ -104,7 +103,7 @@ Need help? We've got you covered:
 - 💻 GitHub: [DaniDMoura](https://github.com/DaniDMoura)
 - 🌐 Project Repository: [BookFinder on GitHub](https://github.com/DaniDMoura/bookfinder)
 
----
+#
 
 <div align="center">
 
