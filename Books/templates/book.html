@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block 'content_main' %}
+<div class="container-sm mt-4">
+  {% if data %}
+    {% for item in data %}
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex">
+            <div class="me-4" style="flex-shrink: 0;">
+              <img src="{{ item.image|default:'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' }}"
+                   class="img-fluid"
+                   style="width: 100px; height: 150px; object-fit: cover; border-radius: 8px;">
+            </div>
+            <div>
+              <h2 class="card-title">{{ item.title }}</h2>
+              <p class="text-muted">
+                <small>{{ item.authors }} | {{ item.publisher }} | {{ item.published_date }}</small>
+              </p>
+              <div class="mt-2">
+                <p>{{ item.description|safe }}</p>
+              </div>
+              <div class="mt-2">
+                <p><strong>Page Count:</strong> {{ item.page_count }}</p>
+              </div>
+              {% if item.buy_link %}
+                <div class="text-end mt-3">
+                  <a href="{{ item.buy_link }}" target="_blank">
+                    <button class="btn btn-outline-success btn-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+                      </svg>
+                      Buy Now
+                    </button>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p class="text-center text-muted">No results found.</p>
+  {% endif %}
+</div>
+{% endblock %}

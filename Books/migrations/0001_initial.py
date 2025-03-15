@@ -11,26 +11,26 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Book",
+            name='Book',
             fields=[
                 (
-                    "id",
+                    'id',
                     models.BigAutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name="ID",
+                        verbose_name='ID',
                     ),
                 ),
-                ("title", models.CharField(max_length=255)),
-                ("author", models.CharField(max_length=255)),
-                ("publisher", models.CharField(max_length=255)),
-                ("published_date", models.DateField()),
-                ("description", models.TextField()),
-                ("page_count", models.IntegerField()),
-                ("language", models.CharField(max_length=255)),
-                ("image_link", models.CharField()),
-                ("buy_link", models.CharField()),
+                ('title', models.CharField(max_length=255)),
+                ('author', models.CharField(max_length=255)),
+                ('publisher', models.CharField(max_length=255)),
+                ('published_date', models.DateField()),
+                ('description', models.TextField()),
+                ('page_count', models.IntegerField()),
+                ('language', models.CharField(max_length=255)),
+                ('image_link', models.CharField()),
+                ('buy_link', models.CharField()),
             ],
         ),
     ]

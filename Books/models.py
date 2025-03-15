@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Book(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
@@ -11,5 +12,6 @@ class Book(models.Model):
     image_link = models.CharField()
     buy_link = models.CharField()
 
+
 def __str__(self):
-    return f"{self.title} | {self.author}"
+    return f'{self.title} | {self.author}'
