@@ -1,91 +1,113 @@
-# BookFinder
+<div align="center">
 
-BookFinder is a professional-grade web application built with Django, designed to help users search for books, view detailed information, and manage their personal collections.
+#  BookFinder
 
-<p align="center">
-  <img src="Assets/homepage.png" width="100%" />
-</p>
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/) [![Django](https://img.shields.io/badge/django-4.2+-green.svg)](https://www.djangoproject.com/) [![PostgreSQL](https://img.shields.io/badge/postgresql-13+-blue.svg)](https://www.postgresql.org/)
+
+Your personal library companion - Search, discover, and manage your book collection with ease.
+
+---
 <br>
-<p align="center">
-  <img src="Assets/searches.png" width="100%" />
-</p>
 
-## Features
+![BookFinder Homepage](Assets/homepage.png)
+![BookFinder Search](Assets/searches.png)
 
-- Search for books by title, author, or genre
-- View comprehensive book details
-- Add books to a personal collection
-- User authentication and account management
+</div>
 
-## Technologies Used
+---
 
-- Django (Python framework)
-- PostgreSQL&#x20;
-- Bootstrap (for responsive design)
+## Tech Stack
+
+- **Backend Framework:** Django 4.2+
+- **Database:** PostgreSQL 13+
+- **Frontend:** Bootstrap 5
+- **Caching:** Redis (Coming Soon)
+- **Containerization:** Docker (Coming Soon)
+- **Package Management:** Poetry
+- **Version Control:** Git
 
 ## Installation
 
-#### Prerequisites
+---
 
-- Python (managed with Pyenv)
-- Poetry (for dependency management)
-- PostgreSQL (for production, optional for local development)
-- Redis (Comming Soon)
-- Docker (Comming Soon)
+### Prerequisites
 
+Before you begin, ensure you have the following installed:
 
-#### Setup
+- Python 3.8 or higher (managed with Pyenv)
+- Poetry for dependency management
+- PostgreSQL (optional for local development)
+- Redis (Coming Soon)
+- Docker (Coming Soon)
 
-1. Clone the repository:
+### Quick Start Guide
 
-   ```sh
+1. **Clone the Repository**
+   ```bash
    git clone https://github.com/yourusername/bookfinder.git
    cd bookfinder
    ```
 
-2. Set up the virtual environment and install dependencies:
-
-   ```sh
+2. **Set Up Environment**
+   ```bash
    poetry install
    ```
 
-3. Configure the environment variables:
-
-   ```sh
+3. **Configure Environment Variables**
+   ```bash
    cp .env.example .env
+   # Edit .env with your configuration
    ```
 
-   Update `.env` with your database credentials and API keys.
-
-4. Apply migrations:
-
-   ```sh
+4. **Initialize Database**
+   ```bash
    poetry run python manage.py migrate
-   ```
-
-5. Create a superuser to access the admin panel:
-
-   ```sh
    poetry run python manage.py createsuperuser
    ```
 
-6. Run the development server:
-
-   ```sh
+5. **Start Development Server**
+   ```bash
    poetry run python manage.py runserver
    ```
 
-7. Access the application at `http://127.0.0.1:8000/`.
+6. **Access the Application**
+   - Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser
+   - Admin panel: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
-## Contributing
+---
 
-Contributions are welcome! Please open an issue or submit a pull request with improvements or feature requests.
+##  Contributing
+
+We welcome contributions from the community! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+---
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+---
 
-For any inquiries, contact [mouradanilo061@gmail.com](mailto\:your-email@example.com) or visit the repository at [GitHub Link](https://github.com/DaniDMoura).
+## Support
 
+Need help? We've got you covered:
+
+- 📧 Email: [mouradanilo061@gmail.com](mailto:mouradanilo061@gmail.com)
+- 💻 GitHub: [DaniDMoura](https://github.com/DaniDMoura)
+- 🌐 Project Repository: [BookFinder on GitHub](https://github.com/DaniDMoura/bookfinder)
+
+---
+
+<div align="center">
+
+Made with ❤️ by [DaniDMoura](https://github.com/DaniDMoura)
+
+</div>
