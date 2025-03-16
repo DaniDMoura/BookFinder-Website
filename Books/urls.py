@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import Home, About, BookView, Search, Book
+from .views import Home, About, BooksView, Search, BookView
 
 urlpatterns = [
     path('', Home.as_view(), name='home'),
     path('about/', About.as_view(), name='about'),
-    path('books/', BookView.as_view(), name='books'),
+    path('books/', BooksView.as_view(), name='book-list'),
     path('search/', Search.as_view(), name='search'),
-    path('book/<str:id>', Book.as_view(), name='book'),
+    path('book/<str:id>', BookView.as_view(), name='book'),
+    path('books/delete/<str:id>/', BooksView.as_view(), name='book-delete')
 ]
