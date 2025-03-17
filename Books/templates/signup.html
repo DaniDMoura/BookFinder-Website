@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block 'content_main' %}
+<div class="card container-sm mx-auto my-5" style="width:650px">
+  <form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+    <div class="container-sm my-4">
+      <div class="text-center mb-4">
+        <h5>Sign Up <b>BookFinder</b></h5>
+      </div>
+      <div class="mb-4">
+        {{form.username.as_field_group}}
+      </div>
+      <div class="mb-4">
+        {{form.email.as_field_group}}
+      </div>
+      <div class="mb-4">
+        {{form.first_name.as_field_group}}
+      </div>
+      <div class="mb-4">
+        {{form.last_name.as_field_group}}
+      </div>
+      <div class="mb-4">
+        {{form.password1.as_field_group}}
+      </div>
+      <div class="mb-5">
+        {{form.password2.as_field_group}}
+      </div>
+      <div class="text-center">
+        <button class="btn btn-dark" type="submit">
+          <span>Sign Up</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+            <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+          </svg>
+        </button>
+        <p></p>
+        <span>Already have an account? <a class="text-dark" href="{% url 'login' %}">Login</a> here</span>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+{% endblock %}

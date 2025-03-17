@@ -8,13 +8,13 @@ Your personal library companion - Search, discover, and manage your book collect
 
 <br>
 
-![BookFinder Homepage](Assets/homepage.png)
+![BookFinder Homepage](Images/homepage.png)
 <p><p>
 
-![BookFinder Search](Assets/searches.png)
+![BookFinder Search](Images/searches.png)
 <p><p>
 
-![BookFinder BookList](Assets/booklist.png)
+![BookFinder BookList](Images/booklist.png)
 </div>
 
 

@@ -6,6 +6,8 @@ from http import HTTPStatus
 import requests
 from .models import Book
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import SignUpForm
+from django.contrib.auth import login, authenticate
 
 load_dotenv()
 api_key = os.getenv('API_KEY')
@@ -137,3 +139,19 @@ class BookView(LoginRequiredMixin, View):
 class Login(View):
     def get(self, request):
         return render(request, 'login.html')
+
+
+class Signup(View):
+    def get(self,request):
+        return render(request, 'signup.html',{'form':SignUpForm})
+    def post(self,request):
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username,password=raw_password)
+            login(request, user)
+            return redirect('home')
+        else:
+            return render(request, 'signup.html', {'form': form})
