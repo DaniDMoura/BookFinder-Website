@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from http import HTTPStatus
 import requests
 from .models import Book
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 load_dotenv()
 api_key = os.getenv('API_KEY')
@@ -56,9 +57,10 @@ class About(View):
         return render(request, 'about.html')
 
 
-class BooksView(View):
+
+class BooksView(LoginRequiredMixin, View):
     def get(self, request):
-        saved_books = Book.objects.all()
+        saved_books = Book.objects.filter(user=request.user)
         books_values = list(saved_books.values('title', 'image_link', 'book_id'))
         return render(request, 'books.html', {'books': books_values})
     def post(self, request, id):
@@ -108,7 +110,7 @@ class Search(View):
         return render(request, 'home.html')
 
 
-class BookView(View):
+class BookView(LoginRequiredMixin, View):
     def get(self, request, id):
         book = get_data_with_id(id)
         is_saved = Book.objects.filter(book_id=id)
@@ -126,7 +128,12 @@ class BookView(View):
             page_count=book.get('page_count'),
             image_link=book.get('image'),
             buy_link=book.get('buy_link'),
-            book_id=book.get('id')
+            book_id=book.get('id'),
+            user=request.user
         )
         book_new_object.save()
         return redirect('/books')
+
+class Login(View):
+    def get(self, request):
+        return render(request, 'login.html')

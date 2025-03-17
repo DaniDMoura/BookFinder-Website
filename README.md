@@ -2,7 +2,7 @@
 
 #  BookFinder
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/) [![Django](https://img.shields.io/badge/django-4.2+-green.svg)](https://www.djangoproject.com/) [![PostgreSQL](https://img.shields.io/badge/postgresql-13+-blue.svg)](https://www.postgresql.org/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/) [![Django](https://img.shields.io/badge/django-5.0+-green.svg)](https://www.djangoproject.com/) [![PostgreSQL](https://img.shields.io/badge/postgresql-13+-blue.svg)](https://www.postgresql.org/)
 
 Your personal library companion - Search, discover, and manage your book collection with ease.
 
@@ -12,7 +12,9 @@ Your personal library companion - Search, discover, and manage your book collect
 <p><p>
 
 ![BookFinder Search](Assets/searches.png)
+<p><p>
 
+![BookFinder BookList](Assets/booklist.png)
 </div>
 
 
