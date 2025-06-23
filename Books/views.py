@@ -10,7 +10,7 @@ from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
 
 load_dotenv()
-api_key = os.getenv('API_KEY')
+api_key = os.getenv('GOOGLE_BOOKS_API_KEY')
 
 
 def get_data_with_id(id):
